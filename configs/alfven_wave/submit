@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --account=EPaCO
+#SBATCH -J alfven
+#SBATCH --partition=a100
+#SBATCH --gres=gpu:1
+#SBATCH -o entity.out
+#SBATCH -e entity.err
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --time=12:00:00
+
+module use --append /dartfs/rc/lab/E/EPaCO/.mods
+module load entity/cuda/mpi/a100
+
+cd /dartfs/rc/lab/E/EPaCO/phys118/Li/final_project/o_mode_Alfven
+
+mpirun -np 1 /dartfs-hpc/rc/home/w/f007h9w/entity/build/src/entity.xc \
+  -input ./o_mode_periodic.toml

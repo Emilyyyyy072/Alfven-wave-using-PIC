@@ -1,0 +1,61 @@
+[simulation]
+  name    = "em_vacuum"
+  engine  = "srpic"
+  runtime = 400.0
+
+[grid]
+  resolution = [800, 800]
+  extent     = [[-1.0, 1.0], [-1.0, 1.0]]
+
+  [grid.metric]
+    metric = "minkowski"
+
+  [grid.boundaries]
+    fields    = [["PERIODIC"], ["PERIODIC"]]
+    particles = [["PERIODIC"], ["PERIODIC"]]
+
+[scales]
+  larmor0    = 0.001
+  skindepth0 = 0.2
+
+[algorithms]
+  current_filters = 2
+  
+  [algorithms.timestep]
+    CFL = 0.5
+
+[particles]
+  ppc0 = 64.0
+
+  [[particles.species]]
+    label = "e-_p"
+    mass = 1.0
+    charge = -1.0
+    maxnpart = 2e8
+
+  [[particles.species]]
+    label = "e+_p"
+    mass = 1.0
+    charge = 1.0
+    maxnpart = 2e8
+
+[setup]
+  temp = 0.01
+  amplitude = 0.0001
+  nwave_x = 1.0
+  nwave_y = 1.0
+  nwave_z = 1.0
+  frequency = 2.5383
+
+[output]
+  format        = "BP5"
+  interval      = 100
+
+  [output.fields]
+    quantities = ["E", "B", "N","J"]
+
+  [output.stats]
+    quantities = ["N_1"]
+
+[diagnostics]
+  colored_stdout = false
