@@ -23,8 +23,8 @@ Different simulations explore the effect of:
 -driving frequency
 
 ## Analysis
-The analysis notebooks in 'analysis/' perform:
--field visualization
+The analysis notebooks in 'analysis/' perform:  
+-field visualization  
 -wave energy evolution
 
 Wave energy is computed as
