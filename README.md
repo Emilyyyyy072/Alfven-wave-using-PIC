@@ -10,9 +10,9 @@ The simulations use periodic boundary conditions and an external antenna driver.
 files and partily in the underlying problem generator used for compilation.
 
 ## Simulation Setup
--Backgroud magnetic field: \(B_0 = (1,0,0)\) along the x-direction
--Period domain: \(L_x=L_y=2\)
--Grid resolution: \(800 \times 800\)
+- Background magnetic field: $B_0 = (1,0,0)$ along the x-direction
+- Periodic domain: $L_x = L_y = 2$
+- Grid resolution: $800 \times 800$
 -Antenna driving frequency chosen near the Alfven eigenmode
 
 Different simulations explore the effect of:
@@ -21,14 +21,15 @@ Different simulations explore the effect of:
 -driving frequency
 
 ## Analysis
-The analysis notebooks in 'analysis/' performs:
+The analysis notebooks in 'analysis/' perform:
 -field visualization
 -wave energy evolution
 
-Wave energy in computed as
-\[
+Wave energy is computed as
+
+$$
 E_{\text{wave}} = \frac{1}{2}\int (E^2 + (B - B_0)^2)\, dV
-\]
+$$
 
 which isolates the energy of the propagating wave from the background magnetic field.
 
