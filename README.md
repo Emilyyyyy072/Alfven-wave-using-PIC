@@ -1,6 +1,8 @@
 # Alfven-wave-using-PIC
 Particle and Field Response to an antenna-driven Alfvén wave in PIC simulation
+
 Course final project for PHY118 - Computational Plasma Dynamics (WI26)
+
 
 This project studies the particle response to an antenna-driven Alfven wave using Particle-in-Cell (PIC) simulations.
 The simulations were run using the GPU-accelerated electromagnetic PIC code Entity. The setup is based on the problem generator in epaco-dartmouth/entity-pgens/mode_conversion/o_mode_periodic, with project-specific simulation parameters and analysis collected here.
@@ -28,7 +30,7 @@ The analysis notebooks in 'analysis/' perform:
 Wave energy is computed as
 
 $$
-E_{\text{wave}} = \frac{1}{2}\int (E^2 + (B - B_0)^2)\, dV
+E_{\text{wave}} = \frac{1}{2}\int (E^2 + (B - B_0)^2)\ dV
 $$
 
 which isolates the energy of the propagating wave from the background magnetic field.
