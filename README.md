@@ -8,8 +8,8 @@ This project studies the particle response to an antenna-driven Alfven wave usin
 The simulations were run using the GPU-accelerated electromagnetic PIC code Entity. The setup is based on the problem generator in epaco-dartmouth/entity-pgens/mode_conversion/o_mode_periodic, with project-specific simulation parameters and analysis collected here.
 
 ## Simulation Notes
-The simulations use periodic boundary conditions and an external antenna driver. Key physical and numerical parameter are specified partly in the '.toml'
-files and partily in the underlying problem generator used for compilation.
+The simulations use periodic boundary conditions and an external antenna driver. Key physical and numerical parameters are specified partly in the `.toml`
+files and partly in the underlying problem generator used for compilation.
 
 ## Simulation Setup
 - Background magnetic field: $B_0 = (1,0,0)$ along the x-direction
@@ -18,14 +18,14 @@ files and partily in the underlying problem generator used for compilation.
 -Antenna driving frequency chosen near the Alfven eigenmode
 
 Different simulations explore the effect of:
--plasma temperature
--wave number
--driving frequency
+- plasma temperature
+- wave number
+- driving frequency
 
 ## Analysis
-The analysis notebooks in 'analysis/' perform:  
--field visualization  
--wave energy evolution
+The analysis notebooks in `analysis/` perform:  
+- field visualization  
+- wave energy evolution
 
 Wave energy is computed as
 
